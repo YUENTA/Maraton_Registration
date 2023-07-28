@@ -1,25 +1,25 @@
 # Front-end_practice
-! + tab: 기본 포맷 형성(html, head, title, body 태그 등..)
-ctrl + shift + p -> format document: 자동포맷 형성(가독성 좋아짐)
-ctrl + /: 주석 처리 (ctrl + shift + p -> comment 후 토클라인커멘트에서 확인 가능)
+#! + tab: 기본 포맷 형성(html, head, title, body 태그 등..)
+#ctrl + shift + p -> format document: 자동포맷 형성(가독성 좋아짐)
+#ctrl + /: 주석 처리 (ctrl + shift + p -> comment 후 토클라인커멘트에서 확인 가능)
 
-<순서 있는 목록 태그>
-<ol>
-<li>내용</li>
-<ol>
+#<순서 있는 목록 태그>
+#<ol>
+#<li>내용</li>
+#<ol>
 
-<순서 없는 목록 태그>
-<ul>
-<li>내용</li>
+#<순서 없는 목록 태그>
+#<ul>
+#<li>내용</li>
 
--> <li></li>안에는 다시 목록 태그를 넣어도 되고 다른 태그를 무한히 넣을 수 있음
+#-> <li></li>안에는 다시 목록 태그를 넣어도 되고 다른 태그를 무한히 넣을 수 있음
 
-<ol>, <ul>: 목록 태그
-<li>: 목록 아이템
+#<ol>, <ul>: 목록 태그
+#<li>: 목록 아이템
 
 
-<div></div>: 요소를 나눠주는 제네릭 컬렉션 또는 블록단위 요소
---> 콘텐츠를 그룹화할 수 있음 at css
+#<div></div>: 요소를 나눠주는 제네릭 컬렉션 또는 블록단위 요소
+#--> 콘텐츠를 그룹화할 수 있음 at css
 
 <span></span>: 제네릭 컨테이너이고 inline임(div와 비슷하지만 전체 블록을 차지하지 않는다는 뜻)
 --> 하나의 콘텐츠를 span으로 묶게되면 style을 정할 수 있음
