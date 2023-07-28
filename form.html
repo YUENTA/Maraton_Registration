@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+    file:///tacos?username=chickenman
+    http://127.0.0.1:5500/tacos?username=hi&password=1234&color=%23ed1d1d&number=23
+
+    <form action="/tacos">
+
+        <p>
+            <label for="username">Enter a Username:</label>
+            <input id="username" type="text" placeholder="username" name="username">
+        </p>
+
+        <p>
+            <label for="password">Enter a Password: </label>
+            <input id="password" type="password" placeholder="password" name="password">
+        </p>
+
+        <p>
+            <label for="color">Choose a Color: </label>
+            <input id="color" type="color" name="color">
+        </p>
+
+        <p>
+            <label for="number">Enter a Number: </label>
+            <input id="number" type="number" placeholder="enter a number" name="number">
+        </p>
+
+        <button>Submit</button>
+        <input type="submit">
+    </form>
+    <hr>
+    <button>Not Inside Form</button>
+    <h2>Hijacking Searches</h2>
+    <h3>Reddit 검색</h3>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <!-- query대신 q를 주는 이유는 search가 q를 주는 것으로 예상하고 있기에 맞춰주어야 함 -->
+        <button>Search Reddit</button>
+    </form>
+
+    <h3>Google 검색</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+
+    <h3>YouTube 검색</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <!-- https://www.youtube.com/result?search_query=비투비-->
+        <!--유튜브는 q대신 query로 search를 받는 것을 알 수 있음
+       따라서 name = q가 아닌 name = query를 입력해야 함-->
+        <button>Search YouTube</button>
+    </form>
+
+    <h2>More Inputs!</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <!-- tos는 terms of service라는 뜻 -->
+        <label for="agree">agree to everything</label>
+
+        <p>
+            <label for="xs">XS: </label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="m">M: </label>
+            <input type="radio" name="size" id="m" value="m">
+            <label for="l">L</label>
+            <input type="radio" name="size" id="l" value="l">
+            <!-- name을 통일시켜야 하나의 묶음으로 처리해서 중복선택이 불가하게 만들 수 있음. -->
+        </p>
+        <button>Submit</button>
+    </form>
+
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="Meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="veg">Vegetarian</option>
+                <option value="steack">Steak</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="cheese">Amount of Cheese: </label>
+            <input type="range" id="cheese" min="1" max="10" name="cheese_level">
+        </p>
+
+        <p>
+            <label for="request">Any Special Requests?</label>
+            <br>    
+            <textarea id="request" cols="50" rows="10" placeholder="추가로 궁금하신 점이 있으면 여기에 적어주시길 바랍니다."></textarea>
+            
+        </p>
+        <button>Submit</button>
+
+        <h2>유효성 검사 Demo</h2>
+        <form action="/dummy">
+            <label for="first">Enter First Name</label>
+            <input type="text" name="first" id="first" required>
+            <p>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" minlength="5" maxlength="20" required>
+            </p>
+            <button>Submit</button>
+        </form>
+
+
+</body>
+
+</html>

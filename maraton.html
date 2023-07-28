@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maraton Register</title>
+</head>
+
+<body>
+    <h1>Race Registration!</h1>
+    <form action="./maraton">
+
+        <div>
+            <label for="first name">First Name</label>
+            <input type="text" id="first name" name="first name">
+
+            <label for="last name">Last Name</label>
+            <input type="text" id="last name" name="last name">
+        </div>
+
+        <div>
+            <p>
+                Select a Race:
+            </p>
+            <!-- 3개의 radio 버튼 중 하나만 선택할 수 있도록 name에 모두 같은 값인 race를 부여하였다. -->
+            <div>
+                <input type="radio" name="race" id="fun run 5k" value="fun run 5k">
+                <label for="fun run 5k">Fun Run 5k</label>
+            </div>
+            <div>
+                <input type="radio" name="race" id="half maraton" value="half maraton">
+                <label for="half maraton">Half Maraton</label>
+            </div>
+            <div>
+                <input type="radio" name="race" id="full maraton" value="full maraton">
+                <label for="full maraton">Full Maraton</label>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div>
+                <label for="select age group">Selcet Age Group</label>
+                <select name="age" id="select age group">
+                    <option value="under 18">under 18</option>
+                    <option value="18-30">18-30</option>
+                    <option value="30-50">30-50</option>
+                    <option value="50+">50+</option>
+                </select>
+            </div>
+            <button>Register!</button>
+    </form>
+</body>
+
+</html>
